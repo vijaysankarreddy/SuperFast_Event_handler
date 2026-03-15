@@ -3,8 +3,8 @@
    WebSocket connection · Live metric updates · API controls
    ═══════════════════════════════════════════════════════════════════ */
 
-const API_BASE = "http://127.0.0.1:8000";
-const WS_URL   = "ws://127.0.0.1:8000/ws/metrics";
+const API_BASE = `${window.location.origin}`;
+const WS_URL   = `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/ws/metrics`;
 
 // ─── DOM references ───
 const dom = {
