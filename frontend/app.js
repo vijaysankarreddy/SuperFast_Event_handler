@@ -272,8 +272,8 @@ async function postConfig(endpoint, body, successMsg) {
 // Exposed to onclick handlers in HTML
 function applyRate() {
     const val = parseInt(dom.rateInput.value, 10);
-    if (isNaN(val) || val < 100 || val > 10000000) {
-        showToast("Rate must be between 100 and 10,000,000", "error");
+    if (isNaN(val) || val < 100 || val > 40000) {
+        showToast("Rate must be between 100 and 40,000", "error");
         return;
     }
     postConfig("/config/rate", { target_eps: val }, `Event rate set to ${val.toLocaleString()} eps`);

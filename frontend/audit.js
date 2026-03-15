@@ -5,8 +5,8 @@
  * and baseline validation with exact revenue matching.
  */
 
-const WS_URL  = `ws://${location.hostname}:8000/ws/metrics`;
-const API_BASE = `http://${location.hostname}:8000`;
+const API_BASE = `${window.location.origin}`;
+const WS_URL   = `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/ws/metrics`;
 
 // ═══════════════════════════════════════════════════════════════════
 // DOM References
